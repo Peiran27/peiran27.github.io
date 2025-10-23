@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Peiran Cheng | Teaching</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <strong>Peiran Cheng</strong>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html">CV / Resume</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="news.html">News</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Teaching</h1>
+
+  <h2>Courses</h2>
+  <ul>
+    <li><strong>ECON 1116: Principles of Microeconomics</strong> (Term, Year) — syllabus <a href="assets/syllabus.pdf">PDF</a>.</li>
+  </ul>
+
+  <h2>Office Hours</h2>
+  <p>Time / Location / Zoom.</p>
+
+  <h2>Materials</h2>
+  <ul>
+    <li>Slides / Problem sets / Policies（上传到 assets 后加链接）</li>
+  </ul>
+
+  <footer>© 2025 Peiran Cheng</footer>
+</main>
+
+<script>
+(function(){
+  const path = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a').forEach(a=>{
+    if(a.getAttribute('href')===path) a.classList.add('active');
+    if(path==='' && a.getAttribute('href')==='index.html') a.classList.add('active');
+  });
+})();
+</script>
+</body>
+</html>
