@@ -1,19 +1,53 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <title>我的个人网站</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; max-width: 700px; }
-    h1 { color: #d23669; }
-    a { color: #0366d6; text-decoration: none; }
-  </style>
+  <meta charset="utf-8" />
+  <title>Peiran Cheng | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>你好，我是 Peiran Cheng！</h1>
-  <p>欢迎来到我的个人网站。</p>
-  <p>这里我会分享一些项目、学习和生活。</p>
-  <p>📧 联系方式：<a href="mailto:you@example.com">cheng.peir@northeastern.edu</a></p>
+<header class="header">
+  <div class="container nav">
+    <strong>Peiran Cheng</strong>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html">CV / Resume</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="news.html">News</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <img src="assets/avatar.jpg" alt="Peiran Cheng" />
+    <div>
+      <h1>你好，我是 Peiran Cheng</h1>
+      <p>在此写 2–4 句简介（研究领域/学校/兴趣）。</p>
+      <p>Email: <a href="mailto:cheng.peir@northeastern.edu">cheng.peir@northeastern.edu</a></p>
+      <p>快捷链接：<a href="research.html">Research</a> · <a href="cv.html">CV</a> · <a href="teaching.html">Teaching</a> · <a href="news.html">News</a></p>
+    </div>
+  </section>
+
+  <h2>Selected Projects</h2>
+  <div class="cards">
+    <div class="card"><h3>Project A</h3><p>一句话介绍。<a href="#">Link</a></p></div>
+    <div class="card"><h3>Project B</h3><p>一句话介绍。<a href="#">Link</a></p></div>
+  </div>
+
+  <footer>© 2025 Peiran Cheng · Hosted on GitHub Pages</footer>
+</main>
+
+<script>
+(function(){
+  const path = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a').forEach(a=>{
+    if(a.getAttribute('href')===path) a.classList.add('active');
+    if(path==='' && a.getAttribute('href')==='index.html') a.classList.add('active');
+  });
+})();
+</script>
 </body>
 </html>
