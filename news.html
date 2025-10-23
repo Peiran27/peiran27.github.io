@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Peiran Cheng | News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <strong>Peiran Cheng</strong>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html">CV / Resume</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="news.html">News</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>News</h1>
+  <p class="meta">Updates, talks, submissions, teaching notes, etc.</p>
+
+  <section class="news-list">
+    <article class="news-item">
+      <h3>Talk at APPAM 2025 <span class="badge">Talk</span></h3>
+      <div class="meta">2025-11-14 · Washington, DC</div>
+      <p>Presented “Fiscal Rules and Higher Education …”. <a href="assets/slides_appam2025.pdf">Slides</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3>Paper updated: BBR & Higher Ed <span class="badge">Paper</span></h3>
+      <div class="meta">2025-10-08</div>
+      <p>New draft uploaded with extended robustness and event-study windows. <a href="assets/paper_draft.pdf">PDF</a></p>
+    </article>
+  </section>
+
+  <footer>© 2025 Peiran Cheng</footer>
+</main>
+
+<script>
+(function(){
+  const path = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a').forEach(a=>{
+    if(a.getAttribute('href')===path) a.classList.add('active');
+    if(path==='' && a.getAttribute('href')==='index.html') a.classList.add('active');
+  });
+})();
+</script>
+</body>
+</html>
