@@ -1,3 +1,52 @@
+/* ===== Large Header Style ===== */
+.site-header {
+  text-align: center;
+  padding: 40px 20px 10px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.title-block {
+  margin-bottom: 20px;
+}
+
+.site-title {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 46px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.site-subtitle {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 16px;
+  color: #555;
+  margin: 4px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.main-nav a:hover, .main-nav a.active {
+  border-bottom: 2px solid #333;
+  padding-bottom: 3px;
+}
+
 :root { --max: 900px; }
 *{box-sizing:border-box}
 body{font-family:-apple-system,system-ui,Segoe UI,Roboto,Arial,"PingFang SC","Microsoft YaHei",sans-serif;margin:0;background:#fff;color:#222;line-height:1.7}
