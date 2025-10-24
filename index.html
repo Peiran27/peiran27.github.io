@@ -1,47 +1,57 @@
 <!doctype html>
 <html lang="zh-CN">
-<header class="site-header">
-  <div class="title-block">
-    <h1 class="site-title">PEIRAN CHENG</h1>
-    <h2 class="site-subtitle">Ph.D. Candidate, Northeastern University</h2>
-  </div>
-  <nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="assets/CV_Peiran_Cheng.pdf" target="_blank">CV / Resume</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="news.html">News</a>
-  </nav>
+<head>
+  <meta charset="utf-8">
+  <title>Peiran Cheng | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-<main class="container">
-  <section class="hero">
-    <img src="assets/avatar.jpg" alt="Peiran Cheng" />
-    <div>
-      <h1>Peiran Cheng</h1>
-      <p>I am a Ph.D. candidate in Economics at Northeastern University. My research focuses on applied economic, particularly in education,labor, health economics and public finance.  </p>
-      <p>Email: <a href="mailto:cheng.peir@northeastern.edu">cheng.peir@northeastern.edu</a></p>
-      <p>Personal Email: <a href="mailto:cpr635@outlook.com">cpr635@outlook.com</a></p>
-      <p><a href="research.html">Research</a> · <a href="cv.html">CV</a> · <a href="teaching.html">Teaching</a> · <a href="news.html">News</a></p>
+<body>
+  <header class="site-header">
+    <div class="title-block">
+      <h1 class="site-title">PEIRAN CHENG</h1>
+      <h2 class="site-subtitle">Ph.D. Candidate, Northeastern University</h2>
     </div>
-  </section>
 
-  <h2>Selected Projects</h2>
-  <div class="cards">
-    <div class="card"><h3>Project A</h3><p>。<a href="#">Link</a></p></div>
-    <div class="card"><h3>Project B</h3><p>。<a href="#">Link</a></p></div>
-  </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="assets/CV_Peiran_Cheng.pdf" target="_blank">CV / Resume</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="news.html">News</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <img src="assets/avatar.jpg" alt="Peiran Cheng" />
+      <div>
+        <h1>Peiran Cheng</h1>
+        <p>I am a Ph.D. candidate in Economics at Northeastern University. My research focuses on applied economics, particularly in education, labor, health economics, and public finance.</p>
+        <p>Email: <a href="mailto:cheng.peir@northeastern.edu">cheng.peir@northeastern.edu</a></p>
+        <p>Personal Email: <a href="mailto:cpr635@outlook.com">cpr635@outlook.com</a></p>
+        <p><a href="research.html">Research</a> · <a href="assets/CV_Peiran_Cheng.pdf" target="_blank">CV</a> · <a href="teaching.html">Teaching</a> · <a href="news.html">News</a></p>
+      </div>
+    </section>
+
+    <h2>Selected Projects</h2>
+    <div class="cards">
+      <div class="card"><h3>Project A</h3><p>Project description. <a href="#">Link</a></p></div>
+      <div class="card"><h3>Project B</h3><p>Project description. <a href="#">Link</a></p></div>
+    </div>
+  </main>
 
   <footer>© 2025 Peiran Cheng · Hosted on GitHub Pages</footer>
-</main>
 
-<script>
-(function(){
-  const path = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('nav a').forEach(a=>{
-    if(a.getAttribute('href')===path) a.classList.add('active');
-    if(path==='' && a.getAttribute('href')==='index.html') a.classList.add('active');
-  });
-})();
-</script>
+  <script>
+  (function(){
+    const path = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('nav a').forEach(a=>{
+      if(a.getAttribute('href')===path) a.classList.add('active');
+      if(path==='' && a.getAttribute('href')==='index.html') a.classList.add('active');
+    });
+  })();
+  </script>
 </body>
 </html>
