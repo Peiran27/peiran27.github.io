@@ -32,9 +32,11 @@
       <a href="#">Balancing Budgets, Limiting Access: The Impact of State Appropriation Cuts on Public University Decisions</a>
       <span class="paper-label">[Job Market Paper]</span>
     </h3>
-    <p class="paper-meta">Solo-authored</p>
+    <p class="paper-meta">Peiran Cheng</p>
 
-    <a href="#" class="abstract-toggle" onclick="toggleAbstract('abs-jmp'); return false;">▼ Abstract</a>
+   <a href="#" class="abstract-toggle" onclick="toggleAbstract(this, 'abs-jmp'); return false;">
+    ▼ Abstract
+  </a>
     <div id="abs-jmp" class="abstract-text">
       This paper examines how cyclical changes in state appropriations affect public universities’
       decisions and student access. Using institution-level panel data from 2002–2019, I exploit
@@ -125,6 +127,29 @@
       box.style.display = 'none';
     }
   }
+
+  <script>
+function toggleAbstract(link, id) {
+  const box = document.getElementById(id);
+
+  if (box.style.display === "none" || box.style.display === "") {
+    box.style.display = "block";
+    link.innerHTML = "▲ Hide Abstract";
+  } else {
+    box.style.display = "none";
+    link.innerHTML = "▼ Abstract";
+  }
+}
+
+/* 保留你的导航高亮代码 */
+(function(){
+  const path = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a').forEach(a=>{
+    if(a.getAttribute('href')===path) a.classList.add('active');
+  });
+})();
+</script>
+
 
   /* 导航栏高亮，保留你原来的逻辑 */
   (function(){
