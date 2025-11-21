@@ -17,3 +17,48 @@ footer { border-top: 1px solid #eee; margin-top: 36px; padding: 16px 0; color: #
 .news-list { display: grid; gap: 14px; }
 .news-item { border: 1px solid #eee; border-radius: 12px; padding: 14px; }
 .news-item h3 { margin: 0 0 6px; font-size: 18px; }
+/* ------- Research page styles ------- */
+.paper {
+  margin-bottom: 2rem;
+}
+
+.paper h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+}
+
+.paper h3 a {
+  color: #00748c;      /* 和你截图里类似的蓝绿色 */
+  text-decoration: none;
+}
+
+.paper h3 a:hover {
+  text-decoration: underline;
+}
+
+.paper-label {
+  font-weight: 600;
+  margin-left: 0.25rem;
+}
+
+.paper-meta {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.abstract-toggle {
+  display: inline-block;
+  margin: 0.3rem 0 0.6rem;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #333;
+}
+
+.abstract-text {
+  display: none;               /* 默认收起 */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
