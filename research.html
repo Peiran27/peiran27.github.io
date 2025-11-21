@@ -34,9 +34,9 @@
     </h3>
     <p class="paper-meta">Peiran Cheng</p>
 
-   <a href="#" class="abstract-toggle" onclick="toggleAbstract(this, 'abs-jmp'); return false;">
-    ▼ Abstract
-  </a>
+    <a href="#" class="abstract-toggle" onclick="toggleAbstract(this, 'abs-jmp'); return false;">
+      ▼ Abstract
+    </a>
     <div id="abs-jmp" class="abstract-text">
       This paper examines how cyclical changes in state appropriations affect public universities’
       decisions and student access. Using institution-level panel data from 2002–2019, I exploit
@@ -58,7 +58,9 @@
     </h3>
     <p class="paper-meta">with Shenghao Peng</p>
 
-    <a href="#" class="abstract-toggle" onclick="toggleAbstract('abs-ctc'); return false;">▼ Abstract</a>
+    <a href="#" class="abstract-toggle" onclick="toggleAbstract(this, 'abs-ctc'); return false;">
+      ▼ Abstract
+    </a>
     <div id="abs-ctc" class="abstract-text">
       This paper investigates how a temporary income shock brought about by the 2021 expansion of
       the U.S. Child Tax Credit (CTC) affects local crime rates. The expanded CTC provided a sizable,
@@ -83,7 +85,9 @@
       (submitted to xxxx; accepted for presentation at APPAM)
     </p>
 
-    <a href="#" class="abstract-toggle" onclick="toggleAbstract('abs-opioid'); return false;">▼ Abstract</a>
+    <a href="#" class="abstract-toggle" onclick="toggleAbstract(this, 'abs-opioid'); return false;">
+      ▼ Abstract
+    </a>
     <div id="abs-opioid" class="abstract-text">
       More than one-third of opioid-related deaths are attributed to secondary users of prescription opioids with 
       two-thirds obtaining painkillers from family and friends. Using a randomized control trial, we test the effectiveness 
@@ -91,30 +95,30 @@
       medication relative to the control group, yet these effects remained small even when coupled with a text reminder, 
       financial incentive, mail back envelope, or clinician involvement. Our results suggest that while medication 
       return programs may remove opioids from some households, they are unlikely to meaningfully reduce the supply of 
-      opioids within a community.    </div>
+      opioids within a community.
+    </div>
   </div>
 
   <!-- ============== Work in Progress ============== -->
   <h2>Work in Progress</h2>
 
-    <div class="paper">
+  <div class="paper">
     <h3>
       <a href="#">The Impact of Generative AI on Job Opportunities for Junior Software Developers</a>
-      <span class="paper-label"></span>
     </h3>
     <p class="paper-meta">with Alicia Sasser Modestino and Samuel Westby</p>
 
-   <a href="#" class="abstract-toggle" onclick="toggleAbstract(this, 'abs-jmp'); return false;">
-    ▼ Abstract
-  </a>
-    <div id="abs-jmp" class="abstract-text">
-      Using the public release of Chat-GPT in November 2022 as a natural experiment, we explore the effects of
+    <a href="#" class="abstract-toggle" onclick="toggleAbstract(this, 'abs-ai'); return false;">
+      ▼ Abstract
+    </a>
+    <div id="abs-ai" class="abstract-text">
+      Using the public release of ChatGPT in November 2022 as a natural experiment, we explore the effects of
       generative AI on the software developer job market, documenting three new stylized facts. First, using the 
       near-universe of online job vacancies, we find the widespread introduction of generative AI resulted in a 16.3
       percent drop in the relative proportion of junior- versus senior-level software developer job vacancies. Second,
       we find that the relative decline in labor demand for junior- versus senior-level software developers appears
       concentrated among larger firms and bigger cities while industries with moderate exposure to the software
-      industry were more insulated from the effects of Chat-GPT. Third, we reveal alternative career pathways for
+      industry were more insulated from the effects of ChatGPT. Third, we reveal alternative career pathways for
       potentially displaced junior software developers using an occupation similarity network to identify credible job
       opportunities for junior software developers that require minimal re-skilling. Our findings are consistent with
       both recent industry observations as well as the vast literature on skill-biased technological change, reinforcing
@@ -134,48 +138,24 @@
 </main>
 
 <script>
-  /* 抽象展开/收起 */
-  function toggleAbstract(id) {
-    const box = document.getElementById(id);
-    if (!box) return;
-    if (box.style.display === 'none' || box.style.display === '') {
-      box.style.display = 'block';
-    } else {
-      box.style.display = 'none';
-    }
-  }
-
-  <script>
+/* 抽象展开/收起：默认隐藏，点击切换显示 + 改按钮文字 */
 function toggleAbstract(link, id) {
   const box = document.getElementById(id);
+  if (!box) return;
 
-  if (box.style.display === "none" || box.style.display === "") {
-    box.style.display = "block";
-    link.innerHTML = "▲ Hide Abstract";
-  } else {
-    box.style.display = "none";
-    link.innerHTML = "▼ Abstract";
-  }
+  const isHidden = (box.style.display === 'none' || box.style.display === '');
+  box.style.display = isHidden ? 'block' : 'none';
+  link.textContent = isHidden ? '▲ Hide Abstract' : '▼ Abstract';
 }
 
-/* 保留你的导航高亮代码 */
+/* 导航栏高亮（保留原逻辑） */
 (function(){
   const path = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('nav a').forEach(a=>{
     if(a.getAttribute('href')===path) a.classList.add('active');
+    if(path==='' && a.getAttribute('href')==='index.html') a.classList.add('active');
   });
 })();
-</script>
-
-
-  /* 导航栏高亮，保留你原来的逻辑 */
-  (function(){
-    const path = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('nav a').forEach(a=>{
-      if(a.getAttribute('href')===path) a.classList.add('active');
-      if(path==='' && a.getAttribute('href')==='index.html') a.classList.add('active');
-    });
-  })();
 </script>
 </body>
 </html>
