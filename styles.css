@@ -82,4 +82,10 @@ footer { border-top: 1px solid #eee; margin-top: 36px; padding: 16px 0; color: #
   font-style: italic;
 }
 
+.paper h3 a {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
 
