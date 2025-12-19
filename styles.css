@@ -157,6 +157,7 @@ a:hover {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 16px;
+  object-position: center top;
 }
 
 .name {
